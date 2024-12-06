@@ -1,0 +1,42 @@
+###
+GET http://localhost:5000/admin
+
+###
+GET http://localhost:5000/admin/3
+
+###
+POST http://localhost:5000/admin/
+content-type: application/json
+
+{
+    "nombre": "jorge",
+    "apellido": "pablaza",
+    "email": "jorgepalapaz@gmail.com",
+    "password_hash": "123ñlkjh"
+}
+
+###
+PUT http://localhost:5000/admin/19
+content-type: application/json
+
+{
+    "nombre": "maria actualizada",
+    "apellido": "gomez",
+    "email": "mariagomez2@gmail.com",
+    "password_hash": "abc12345"
+}
+
+
+
+###
+DELETE http://localhost:5000/admin/19
+
+
+
+
+
+
+
+
+
+

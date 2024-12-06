@@ -1,0 +1,19 @@
+###
+GET http://localhost:5000/mensajes
+
+###
+GET http://localhost:5000/mensajes/3/98765432/3
+//GET http://localhost:5000/mensajes/:id_admin/:dni_alum/:id_mat
+
+###
+POST http://localhost:5000/mensajes
+Content-Type: application/json
+
+{
+    "id_admin": 3,
+    "dni_alum": 67891234,
+    "id_mat": 2,
+    "fecha_msj": "2024-12-14T03:00:00.000Z",
+    "msj": "el profesor ya fallecio, lo siento."
+}
+

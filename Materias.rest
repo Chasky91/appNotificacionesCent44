@@ -1,0 +1,32 @@
+//llamar a todos
+GET http://localhost:5000/materias/
+
+####
+//llamar a uno por id
+GET http://localhost:5000/materias/1
+
+###
+//crear uno
+POST http://localhost:5000/materias
+content-type: application/json
+
+{
+  "nombre": "Calculo III",
+  "id_profe": 1,
+  "id_carre": 5
+}
+
+###
+//actualizar una materia por id
+PUT http://localhost:5000/materias/32
+content-type: application/json
+
+{
+  "nombre": "Calculo III",
+  "id_profe": 4,
+  "id_carre": 5
+}
+
+###
+//borrar una materia por id
+DELETE http://localhost:5000/materias/32

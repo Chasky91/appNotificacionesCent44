@@ -1,0 +1,27 @@
+##herramienta de desarrollo
+##Crear un cliente especifico
+GET http://localhost:5000/carreras
+
+####
+GET http://localhost:5000/carreras/5
+
+###
+POST http://localhost:5000/carreras
+content-type: application/json
+
+{ 
+  "nombre": "Tecnicatura en agricultura espacial" 
+}
+
+###
+PUT http://localhost:5000/carreras/45
+content-type: application/json
+
+{ 
+  "nombre": "Tecnicatura en paisajismo" 
+}
+
+
+###
+DELETE http://localhost:5000/carreras/10
+

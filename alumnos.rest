@@ -1,0 +1,33 @@
+##herramienta de desarrollo
+##Crear un cliente especifico
+GET http://localhost:5000/alumnos/
+
+####
+GET http://localhost:5000/alumnos/598600
+
+###
+POST http://localhost:5000/alumnos
+content-type: application/json
+
+{
+    "dni":60963852,
+    "nombre": "Raul",
+    "apellido": "Giron",
+    "email": "Raul.Giron@gmail.com"
+}
+
+###
+PUT http://localhost:5000/alumnos/60963852
+content-type: application/json
+
+{
+    "nombre": "Ramon",
+    "apellido": "Giron Giron",
+    "gmail": "Ramon.Giron@gmail.com"
+    //"id_curso": 0,
+  
+}
+
+###
+DELETE http://localhost:5000/alumnos/60963852
+
