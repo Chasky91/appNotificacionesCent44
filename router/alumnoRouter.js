@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { actualizarAlumno, crearAlumno, eliminarAlumno, obtenerAlumnos, obtenerUnAlumno } from "../controllers/alumnoControler.js"
+import { actualizarAlumno, crearAlumno, eliminarAlumno, obtenerAlumnos, obtenerUnAlumno } from "../controllers/alumnoController.js"
 
 //endpoitns para el alumno
 export const routerAlumno = Router()

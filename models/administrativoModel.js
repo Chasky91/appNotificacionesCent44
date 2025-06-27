@@ -1,13 +1,12 @@
 import mysql from 'mysql2/promise';
 
 const config = {
-  host: 'localhost',
-  port: 3306,
-  user: 'root',
-  password: '',
-  database: 'cent_44',
+    host: 'mysqlCENT',
+    port: 3306,
+    user: 'root',
+    password: 'root',
+    database: 'cent_44',
 };
-
 // Crear conexión a la base de datos
 const conexion = await mysql.createConnection(config);
 

@@ -23,20 +23,27 @@ export const obtenerUnAlumno = async (req, res) => {
 }
 
 export const crearAlumno = async (req, res) => {
-    let body = req.body
-    const  resultadoValidacion = validarAlunno(body)
-    if(resultadoValidacion.error) {
-        console.log(typeof result, "que dato es")    
-        return res.status(400).json({mensaje:JSON.parse(resultadoValidacion.error.message)})
-    }     
-    //valiudar los datos que posee el body
-    //console.log(body);
-    //alumnos.push(body)
-    console.log(resultadoValidacion.data)
-    // recupero el sultado de  insertar y selccionar el nuevo registro
-    const nuevo = await alumnoModel.crear(resultadoValidacion.data)
-
-    res.json({"message":nuevo[0]})
+        
+    try {
+        let body = req.body
+        const  resultadoValidacion = validarAlunno(body)
+        if(resultadoValidacion.error) {
+            console.log(typeof result, "que dato es")    
+            return res.status(400).json({mensaje:JSON.parse(resultadoValidacion.error.message)})
+        }     
+        //valiudar los datos que posee el body
+        //console.log(body);
+        //alumnos.push(body)
+        console.log(resultadoValidacion.data)
+        // recupero el sultado de  insertar y selccionar el nuevo registro
+        const nuevo = await alumnoModel.crear(resultadoValidacion.data)
+        
+        res.json({"message":nuevo[0]})
+    }
+    catch (error) {
+        console.error("Error al crear un Alumno:", error);
+        res.status(500).json({ mensaje: "Error al crear el Alumno." });  // Error en el servidor
+    }
 }
 
 

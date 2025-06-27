@@ -1,8 +1,8 @@
 export const config = {
-  host: 'localhost',
+  host: 'mysqlCENT',
   port: 3306,
   user: 'root',
-  password: '',
+  password: 'root',
   database: 'cent_44',
 }
 
