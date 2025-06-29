@@ -1,12 +1,7 @@
 import mysql from 'mysql2/promise';
 
-const config = {
-    host: 'mysqlCENT',
-    port: 3306,
-    user: 'root',
-    password: 'root',
-    database: 'cent_44',
-};
+import { config } from "../config.db.js"
+
 
 const conexion = await mysql.createConnection(config);
 
