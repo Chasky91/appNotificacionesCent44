@@ -6,5 +6,5 @@ export const config = {
   port: process.env.PORT,
   user: 'root',
   password: process.env.DB_PASS,
-  database: 'cent_44',
+  database: 'railway',
 }
