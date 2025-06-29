@@ -6,6 +6,9 @@ import routerMatricula from './router/matriculaRouter.js';
 import routerMateria from './router/materiaRouter.js';
 import { routerAlumno } from './router/alumnoRouter.js';
 import { carreraRouter } from './router/carreraRouter.js';
+
+import dotenv from 'dotenv'
+dotenv.config()
 // Crear el servidor
 const app = express();
 
@@ -26,7 +29,7 @@ app.get('/', (req, res) => {
 });
 
 
-const PUERTO = 5000
+const PUERTO = process.env.PORT2 || 3000
 
 
 app.listen(PUERTO, () => {
