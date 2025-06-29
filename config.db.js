@@ -1,9 +1,7 @@
 export const config = {
-  host: 'mysqnozomi.proxy.rlwy.net',
+  host: process.env.HOST,
   port: 25559,
-  user: 'jOhPzatwFZHnhzTNFjzzVGClzHRWoKoH',
-  password: 'root',
+  user: 'root',
+  password: process.env.DB_PASS,
   database: 'cent_44',
 }
-
-nozomi.proxy.rlwy.net -u root -p jOhPzatwFZHnhzTNFjzzVGClzHRWoKoH --port 25559 --protocol=TCP railway2
